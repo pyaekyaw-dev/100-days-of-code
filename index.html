@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYAEKYAW - Developer Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 0 auto 20px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: #4A00E0;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .content {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #4A00E0;
+            border-bottom: 3px solid #8E2DE2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #8E2DE2;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4A00E0;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #8E2DE2;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .tech {
+            background: #f0f0f0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        
+        .tech:hover {
+            background: #4A00E0;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(142, 45, 226, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">
+                <i class="fas fa-code"></i>
+            </div>
+            <h1>PYAEKYAW</h1>
+            <p class="tagline">Aspiring Professional Web Developer</p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-number" id="dayCounter">1</span>
+                    <span>Day of Code</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="projectCounter">0</span>
+                    <span>Projects</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">12</span>
+                    <span>Months Goal</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <main>
+                <div class="section">
+                    <h2><i class="fas fa-road"></i> My Development Journey</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>📅 Today: Day 1</h3>
+                            <p>Started learning HTML, CSS, and JavaScript. Created my first repository on GitHub.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>🎯 This Week's Goal</h3>
+                            <p>Master HTML5 semantic elements and CSS Flexbox. Build a responsive portfolio page.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>🚀 3-Month Milestone</h3>
+                            <p>Complete Frontend Fundamentals. Build 5+ projects. Learn React basics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-tasks"></i> Today's Tasks</h2>
+                    <ul style="padding-left: 20px; margin-bottom: 20px;">
+                        <li>✅ Create GitHub account</li>
+                        <li>✅ Set up first repository</li>
+                        <li>📝 Learn HTML structure</li>
+                        <li>🎨 Practice basic CSS styling</li>
+                        <li>💾 Make first commit</li>
+                    </ul>
+                    
+                    <a href="#" class="btn" onclick="completeTask()">
+                        <i class="fas fa-check-circle"></i> Mark Day 1 Complete
+                    </a>
+                </div>
+            </main>
+            
+            <aside>
+                <div class="section">
+                    <h2><i class="fas fa-cogs"></i> Tech Stack</h2>
+                    <p><strong>Currently Learning:</strong></p>
+                    <div class="tech-stack">
+                        <span class="tech">HTML5</span>
+                        <span class="tech">CSS3</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">Git</span>
+                    </div>
+                    
+                    <p style="margin-top: 20px;"><strong>Next Up:</strong></p>
+                    <div class="tech-stack">
+                        <span class="tech">React</span>
+                        <span class="tech">Node.js</span>
+                        <span class="tech">MongoDB</span>
+                        <span class="tech">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2><i class="fas fa-link"></i> Links</h2>
+                    <p style="margin-bottom: 10px;">
+                        <i class="fab fa-github"></i> 
+                        <strong>GitHub:</strong> 
+                        <a href="https://github.com/PYAEKYAWPYAEKYAW" target="_blank">
+                            @PYAEKYAWPYAEKYAW
+                        </a>
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        <i class="fas fa-project-diagram"></i> 
+                        <strong>This Project:</strong> 
+                        <a href="#" id="repoLink">web-dev-journey</a>
+                    </p>
+                    
+                    <a href="https://github.com/PYAEKYAWPYAEKYAW?tab=repositories" target="_blank" class="btn">
+                        <i class="fas fa-external-link-alt"></i> View My Repositories
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script>
+        // Simple JavaScript for interactivity
+        function completeTask() {
+            const dayCounter = document.getElementById('dayCounter');
+            const currentDay = parseInt(dayCounter.textContent);
+            dayCounter.textContent = currentDay + 1;
+            
+            const projectCounter = document.getElementById('projectCounter');
+            projectCounter.textContent = '1';
+            
+            alert('🎉 Congratulations! Day 1 completed! You\'ve started your developer journey!');
+        }
+        
+        // Update repository link
+        document.getElementById('repoLink').href = `https://github.com/PYAEKYAWPYAEKYAW/${window.location.pathname.includes('web-dev-journey') ? 'web-dev-journey' : 'new-repo'}`;
+        
+        // Display current date
+        const today = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        console.log(`Today is: ${today.toLocaleDateString('en-US', options)}`);
+    </script>
+</body>
+</html>
